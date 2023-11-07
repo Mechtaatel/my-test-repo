@@ -4,7 +4,7 @@ y1 = int(input())
 x2 = int(input())
 y2 = int(input())
 
-k2 = x2, y2
+k2 = (x2, y2)
 
 m1 = (x1 + 2, y1 + 1)
 m2 = (x1 + 2, y1 - 1)
@@ -15,12 +15,15 @@ m6 = (x1 + 1, y1 - 2)
 m7 = (x1 - 1, y1 + 2)
 m8 = (x1 - 1, y1 - 2)
 
-if (m1 or m2 or m3 or m4 or m5 or m6 or m7 or m8 == k2):
-    print ('koni biut drug druga')
-elif (m1 or m2 or m3 or m4 or m5 or m6 or m7 or m8 != k2):
-    print ('koni ne biut drug druga')
+m = [m1, m2, m3, m4, m5, m6, m7, m8]
 
+for i in m:
+    if i == k2:
+        print ('koni biut drug druga')
+    else:
+        print('koni ne biut drug druga')
 
+# nige otvet k zadachi
 if (abs(x1 - x2) == 2) & (abs(y1 - y2) == 1):
     print('da')
 elif (abs(x1 - x2) == 1) & (abs(y1 - y2) == 2):
