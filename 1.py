@@ -1,11 +1,11 @@
-data = {'testlog': 'testpasswd'}
-a = 42
+data = {'testlog':'testpasswd'}
+a=42
 
 while True:
-	q1 = input('Vhod or registraciy (reg)')
-	if q1 == 'Vhod':
+	q1=input('Vhod(log) or registraciy (reg): ')
+	if q1 == 'log':
 	 	log = input('vvedi login: ')
-	 	psswd = input('vvelbnt passwd: ')
+	 	passwd = input('vvelbnt passwd: ')
 	 	if log in data.keys():
 	 		if data[log] == passwd:
 	 			print('ti zashol')
@@ -21,3 +21,5 @@ while True:
 	 	else:
 	 		data[log] = passwd
 	 		print('Registraciy gotova')
+	elif q1 == 'exit':
+	 	break
