@@ -1,7 +1,8 @@
 import pickle
 tabl = open('Reiting.txt','r+')
 R = tabl.read()
-print(R)
+R
+print(tabl.read())
 print('go - nachat programmu')
 
 i = str(input('Cto delaem:'))
@@ -18,5 +19,7 @@ while True:
         data[a] = A + B
         print(data[a])
         break
+
+
 
 

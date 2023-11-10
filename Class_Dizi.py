@@ -6,7 +6,7 @@ class RatingManager:
 
   def read_data(self):
     # Открываем файл для чтения
-    with open(self.file_path, 'r') as file:
+    with open(self.file_path,'r') as file:
       data = file.read()
 
     # Разбиваем строки на отдельные строки
