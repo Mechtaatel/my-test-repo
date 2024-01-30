@@ -6,8 +6,7 @@ import json
 
 
 def add_pizza(name, price):
-  with open('pizza.json','r') as f:
-    data_pizza = json.load(f)
+  data_pizza = json.load(open('pizza.json'))
   if name not in data_pizza.keys():
     data_pizza[name] = price
     with open('pizza.json','w') as f:
@@ -15,8 +14,7 @@ def add_pizza(name, price):
   else:
     print('Pizza already exists')
 def del_pizza(name):
-  with open('pizza.json','r') as f:
-    data_pizza = json.load(f)
+  data_pizza = json.load(open('pizza.json'))
   if name in data_pizza.keys():
     del data_pizza[name]
     with open('pizza.json','w') as f:
@@ -27,8 +25,7 @@ def order_pizza():
   order = []
   cost = 0
   while True:
-    with open('pizza.json','r') as f:
-      data_pizza = json.load(f)
+    data_pizza = json.load(open('pizza.json'))
     q1 = input('Continue?: ')
     if q1 == 'no':
       break
@@ -47,8 +44,7 @@ while True:
   if q1 == 'log':
     login = input()
     passwd = input()
-    with open('pizza.json','r') as f:
-      data_user = json.load(f)
+    data_user = json.load(open('pizza.json'))
     if login in data_user.keys():
       if data_user[login] == passwd:
         if login == 'Admin':
@@ -62,8 +58,7 @@ while True:
   if q1 == 'reg':
     login = input('login: ')
     passwd = input('password: ')
-    with open('pizza.json','r') as f:
-      data_user = json.load(f)
+    data_user = json.load(open('pizza.json'))
     if login in data_user.keys():
       print('Login busy')
     else:
